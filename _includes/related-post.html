@@ -1,0 +1,16 @@
+{% if site.related_posts != empty %}
+<div class="related-post">
+  <div class="my-4 text-center">(-&-)</div>
+  <h3>{{ site.text.also_like }}</h3>
+  <hr>
+    {% for post in site.related_posts limit:5 %}
+      {% if post.hidden != true %}
+        {% if post.type == 'blog' %}
+          {% include item-blog.html %}
+        {% else if post.type == 'book' %}
+          {% include item-book.html %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+</div>
+{% endif %}

@@ -1,0 +1,130 @@
+markdown: kramdown
+
+plugins: [jekyll-gist, jekyll-paginate, jekyll-seo-tag, jekyll-sitemap]
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+#relative_permalinks: true
+
+# Setup
+rooturl:            https://dulieutonghop.com
+brand:              theme
+baseurl:             /theme
+title:               Tổng hợp sách và tài liệu miễn phí
+tagline:             Chuyên trang tổng hợp sách và tài liệu miễn phí
+paginate:            20
+
+excerpt_separator:   <!--more-->
+
+prose:
+  siteurl: 'https://dulieutonghop.github.io/'
+  media: 'media'
+  ignore:
+    - /downloads
+    - /public
+    - /tags
+    - /media
+    - /.sass-cache
+    - /.gitignore
+    - /404.html
+    - /LICENSE*
+    - /atom.xml
+  metadata:
+      _posts:
+        - name: "title"
+          field:
+            element: "text"
+            label: "Title"
+            value: ""
+        - name: "layout"
+          field:
+            element: "hidden"
+            value: "post"
+        - name: "tags"
+          field:
+            element: "multiselect"
+            label: "Add Tags"
+            alterable: "true"
+            options:
+        - name: "ads"
+          field:
+            element: "checkbox"
+            label: "Advertising"
+            value: "true"
+        - name: "comments"
+          field:
+            element: "checkbox"
+            label: "Comments"
+            value: "true"
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# specific configurations
+db:
+  comments:
+    enabled: false
+    provider: disqus
+    disqus:
+      short_name: dulieutonghop
+
+  ads:
+    enabled: false
+    provider: adsense
+
+  analytics:
+    enabled: false
+    provider: google
+    google:
+      tracking_id: ''
+
+  item-fb-like: True
+  item-affiliate: True
+
+  gg-site-verify: "os0T-WleYazSLKzDnsfVUD_n09lPNd9tYNVVAR4Dexs"
+  book_page_cnt: 20
+
+text:
+  search_ph: "Tìm trên trang"
+  search_text: "Tìm kiếm"
+  page: "trang"
+  subsite_text: "Sách"
+  subsite_url_text: "sach"
+  author: "Tác giả"
+  category: "Thê loại"
+  tags: "Tags"
+  select_format: "Vui lòng chọn định dạng file để tải về."
+  also_like: "Có thể bạn sẽ thích"
+  not_found_title: "Không thấy trang"
+  not_found_sorry: "Xin lỗi, không tìm thấy trang bạn yêu cầu."
+  not_found_backhome: "Về trang chủ"
+  not_found_refind: "để thử tìm lại."
+
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fa fa-fw fa-twitter-square"
+      # url:
+    - label: "Facebook"
+      icon: "fa fa-fw fa-facebook-square"
+      # url:
+    - label: "GitHub"
+      icon: "fa fa-fw fa-github"
+      # url:
+    - label: "GitLab"
+      icon: "fa fa-fw fa-gitlab"
+      # url:
+    - label: "Bitbucket"
+      icon: "fa fa-fw fa-bitbucket"
+      # url:
+    - label: "Instagram"
+      icon: "fa fa-fw fa-instagram"
+      # url:
+
+

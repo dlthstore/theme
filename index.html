@@ -1,0 +1,31 @@
+---
+layout: default
+title: Home
+---
+
+<div class="container">
+  <div class="row">
+		<div class="col-md-9">
+			<div class="edit-primary">
+				<hr>
+				{% for post in paginator.posts %}
+				  {% if post.hidden != true %}
+				    {% if post.type == 'blog' %}
+				    	{% include item-blog.html %}
+				    {% else if post.type == 'book' %}
+				    	{% include item-book.html %}
+				  	{% endif %}
+				  {% endif %}
+				{% endfor %}
+
+				{% include paginations.html %}
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="edit-sidebar">
+				{% include sidebar.html %}
+			</div>
+		</div>
+  </div>
+</div>
